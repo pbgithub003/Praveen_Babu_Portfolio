@@ -1,4 +1,4 @@
-const staticAnimeshData = "site-cache-v1";
+const staticData = "site-cache-v1";
 const assets = [
   //   "/",
   "/index.html",
@@ -28,7 +28,7 @@ const assets = [
 
 self.addEventListener("install", (installEvent) => {
   installEvent.waitUntil(
-    caches.open(staticAnimeshData).then((cache) => {
+    caches.open(staticData).then((cache) => {
       cache.addAll(assets);
     })
   );

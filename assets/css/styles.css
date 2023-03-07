@@ -914,6 +914,12 @@ from, to { border-color: transparent }
 }
 
 /*==================== TESTIMONIAL ====================*/
+/*====================Connect==========================*/
+a.button.button--flex{
+  margin: 95px;
+  background-color: orangered;
+
+}
 
 /*==================== CONTACT ME ====================*/
 
