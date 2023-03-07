@@ -172,7 +172,7 @@ img {
 /*==================== LAYOUT ====================*/
 
 .container {
-  max-width: 768px;
+  max-width: 968px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -325,21 +325,125 @@ header {
 }
 
 /*==================== HOME ====================*/
+#home{
+  background-position: center center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  background-image: url('../img/banner.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+.gradient {
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.gradient {
+  background: #002453;
+  background: -moz-linear-gradient(45deg, #002453 0%, #ff2b4a 100%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#002453), color-stop(100%,#ff2b4a));
+  background: -webkit-linear-gradient(45deg, #002453 0%,#ff2b4a 100%);
+  background: -o-linear-gradient(45deg, #002453 0%,#ff2b4a 100%);
+  background: -ms-linear-gradient(45deg, #002453 0%,#ff2b4a 100%);
+  background: linear-gradient(45deg, #002453 0%,#ff2b4a 100%);
+
+}
+.dtable {
+  display: table;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.dtablecell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.content-inner {
+  position: relative;
+  z-index: 10;
+}
+
+.banner-content {
+  color: #fff;
+}
+
+.banner-content h1 {
+  display: inline-block;
+  font-size: 35px;
+  padding: 15px 0 19px;
+  text-transform: uppercase;
+  letter-spacing: 30px;
+  font-weight: 200;
+  color: white;
+}
+
+.banner-content p {
+  font-size: 16px;
+  margin: 23px 0 0;
+  letter-spacing: 10px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+.typewriter p {
+overflow: hidden;
+
+border-right: .15em solid Black;
+white-space: nowrap;
+margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+ /* Adjust as needed */
+animation:
+  typing 6.5s steps(40, end),
+  blink-caret 0.95s step-end infinite;
+  font-family: 'Volkhov', ;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 70px;
+  letter-spacing: 5px;
+  line-height: 25px;
+}
+
+/* The typing effect */
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: transparent; }
+}
+
 
 .home__container {
   gap: 1rem;
 }
 
 .home__content {
-  grid-template-columns: 0.5fr 3fr;
+  grid-template-columns: 2.5fr 1fr;
   padding-top: 3.5rem;
   align-items: center;
+  padding-bottom: 4.5rem;
 }
 
 .home__social {
   display: grid;
   grid-template-columns: max-content;
   row-gap: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .home__social-icon {
@@ -355,6 +459,10 @@ header {
   width: 200px;
   fill: var(--first-color);
 }
+.home__img{
+  position:  relative;
+  z-index: 2;
+}
 
 .home__blob-img {
   width: 255px;
@@ -365,6 +473,7 @@ header {
 }
 
 .home__title {
+  color: white;
   font-size: var(--big-font-size);
 }
 
@@ -381,6 +490,8 @@ header {
 
 .home__scroll {
   display: none;
+  position: relative;
+  z-index: 1;
 }
 
 .home__scroll-button {
@@ -398,7 +509,7 @@ header {
 
 .home__scroll-name {
   font-size: var(--small-font-size);
-  color: var(--title-color);
+  color: color;
   font-weight: var(--font-medium);
   margin-right: var(--mb-0-25);
 }
@@ -458,48 +569,56 @@ header {
 }
 
 /*==================== ABOUT ====================*/
-
-.about__img {
-  width: 150px;
-  border-radius: 0.5rem;
-  justify-self: center;
-  align-self: center;
+ 
+#about{
+  margin: 100px 5px;
+  height: 100vh;
 }
-
-.about__description {
+#about .title{
   text-align: center;
-  margin-bottom: var(--mb-2-5);
+  font-weight: 1000;
+  margin-bottom: 80px;
 }
-
-.about__info {
+#about .container{
   display: flex;
-  justify-content: space-evenly;
-  margin-bottom: var(--mb-2-5);
+  flex-direction: row;
 }
-
-.about__info-title {
-  font-size: var(--h2-font-size);
-  font-weight: var(--font-semi-bold);
-  color: var(--title-color);
+.col1{
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 3px;
+  flex-grow: 1;
+  width: 60%;
+  transition: all 1.5s ease;
 }
-
-.about__info-name {
-  font-size: var(--smaller-font-size);
+#about .container:hover  .col1{
+  transform: scale(1.2);
 }
-
-.about__info-name,
-.about__info-title {
-  display: block;
-  text-align: center;
+#about .container:hover .col2 img{
+  transform: translateX(150px);
 }
-
-.about__buttons {
-  display: flex;
-  justify-content: center;
+.up{
+  font-size:50px;
+  line-height:60px;
+  font-weight: bold;
 }
-
+.down{
+  font-size:30px;
+  line-height:50px;
+}
+.col2{
+  height: 100%;
+  flex-grow: 1;
+  width: 40%;
+  transition: all 1.5s ease;
+}
+.col2 img{
+  width: auto;
+  transition: all 1.5s ease;
+}
 /*==================== SKILLS ====================*/
-
+#skills{
+  padding-top: 32px;
+}
 .skills__container {
   display: grid;
   gap: 1.5rem;
@@ -1191,3 +1310,11 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
+
+
+
+
+
+
